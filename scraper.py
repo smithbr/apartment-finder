@@ -127,7 +127,9 @@ def do_scrape():
     # Get all the results from craigslist.
     all_results = []
     for area in settings.AREAS:
+        print("Scraping area {}".format(area))
         all_results += scrape_area(area)
+        print("Scraping area {} completed. Found {} results".format(area, len(all_results)))
 
     print("{}: Got {} results".format(time.ctime(), len(all_results)))
 
