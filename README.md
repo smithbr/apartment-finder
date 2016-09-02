@@ -14,6 +14,11 @@ Look in `settings.py` for a full list of all the configuration options.  Here's 
 
 * `MIN_PRICE` -- the minimum listing price you want to search for.
 * `MAX_PRICE` -- the minimum listing price you want to search for.
+* `MIN_BEDROOMS` -- the minimum number of bedrooms you want to search for.
+* `MIN_BATHROOMS` -- the minimum number of bathrooms you want to search for.
+* `MIN_FT2` -- the minimum square footage of the housing you are looking for.
+* `CATS_OK` -- if cats are ok.
+* `LAUNDRY_IN_UNIT` -- if there is a washer and dryer in the unit.
 * `CRAIGSLIST_SITE` -- the regional Craigslist site you want to search in.
 * `AREAS` -- a list of areas of the regional Craiglist site that you want to search in.
 * `BOXES` -- coordinate boxes of the neighborhoods you want to look in.
@@ -64,10 +69,9 @@ Installation + Usage
 
 * Make sure to do the steps in the configuration section above first.
 * Install Docker by following [these instructions](https://docs.docker.com/engine/installation/).
-* To run the program with the default configuration:
-    * `docker run -d -e SLACK_TOKEN={YOUR_SLACK_TOKEN} dataquestio/apartment-finder`
-* To run the program with your own configuration:
-    * `docker run -d -e SLACK_TOKEN={YOUR_SLACK_TOKEN} -v {ABSOLUTE_PATH_TO_YOUR_CONFIG_FOLDER}:/opt/wwc/apartment-finder/config dataquestio/apartment-finder`
+* Use `docker build -t "apartment-finder:dockerfile" .` to build the container.
+* To run the program:
+    * `docker run -d -e SLACK_TOKEN={YOUR_SLACK_TOKEN} -v /root/apartment-finder/config:/opt/wwc/apartment-finder/config apartment-finder:dockerfile`
     
 ## Manual
 
@@ -87,7 +91,7 @@ Troubleshooting
     * `select * from listings` will get all of the stored listings.
     * If nothing is in the database, you may need to wait for a bit, or verify that your settings aren't too restrictive and aren't finding any listings.
     * You can see how many listings are being found by looking at the logs.
-* Inspect the logs using `tail -f -n 1000 /opt/wwc/logs/afinder.log`.
+* Inspect the logs using `tail -f -n 1000 /opt/wwc/logs/afinder.log` or use `sh ./tail.sh`.
 
 ## Manual
 
