@@ -1,18 +1,14 @@
 import os
 
-## Price
-
-# The minimum rent you want to pay per month.
 MIN_PRICE = 1500
-
-# The maximum rent you want to pay per month.
 MAX_PRICE = 2000
+MIN_BEDROOMS = 2
+MIN_BATHROOMS = 1
+MIN_FT2 = 591
 
-## Location preferences
+CATS_OK = True
+LAUNDRY_IN_UNIT = True
 
-# The Craigslist site you want to search on.
-# For instance, https://sfbay.craigslist.org is SF and the Bay Area.
-# You only need the beginning of the URL.
 CRAIGSLIST_SITE = 'losangeles'
 
 # What Craigslist subdirectories to search on.
