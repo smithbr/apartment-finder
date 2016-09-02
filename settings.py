@@ -55,7 +55,7 @@ BOXES = {
 # one of the boxes you defined, it will be checked to see if the neighborhood name it was listed under matches one
 # of these.  This is less accurate than the boxes, because it relies on the owner to set the right neighborhood,
 # but it also catches listings that don't have coordinates (many listings are missing this info).
-NEIGHBORHOODS = ["weho", "west hollywood", "hollywood", "santa monica", "venice", "marina del rey", "playa vista", "culver city", "larchmont village", "mar vista", "studio city", "palms", "westwood", "beverly hills", "la brea", "crescent", "carthay", "wilshire", "jefferson park", "cienega", "koreatown", "beach", "echo park", "silver lake", "silverlake", "whitley heights", "century city", "el segundo", "playa del rey"]
+NEIGHBORHOODS = ["weho", "west hollywood", "hollywood", "santa monica", "venice", "marina del rey", "playa vista", "culver city", "larchmont village", "mar vista", "studio city", "palms", "westwood", "beverly hills", "la brea", "crescent", "carthay", "wilshire", "jefferson park", "cienega", "koreatown", "manhattan beach", "hermosa beach", "redondo beach", "echo park", "silver lake", "silverlake", "whitley heights", "century city", "el segundo", "playa del rey"]
 
 ## Transit preferences
 
